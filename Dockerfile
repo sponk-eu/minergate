@@ -11,5 +11,5 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli \
     && dpkg -i *.deb \
     && rm *.deb
 
-ENTRYPOINT ["/bin/sh", "-c", "minergate-cli -u $USER -$COIN $NUM_CORES"]
+ENTRYPOINT ["/bin/sh", "-c", "minergate-cli -u $USER --$COIN $NUM_CORES"]
 
